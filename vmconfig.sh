@@ -1,7 +1,7 @@
-if [ "$EUID" -ne 0 ];then 
-    echo "Please run as root"
-    exit
-fi
+#if [ "$EUID" -ne 0 ];then 
+#    echo "Please run as root"
+#    exit
+#fi
 
 src_dir=.
 
@@ -154,6 +154,6 @@ cmd_restore()
         extract_vm_config "${vmnamedisk}" "" ${file}
     fi
 }
-help_add "vmconfig" "vmconfig [ vmname | qcowfile ] confg_tgz_file"
+help_add "vmconfig" "vmconfig [backup|restore] [ vmname | qcowfile ] confg_tgz_file"
 
 . $src_dir/scripts/cmd.tail.sh
